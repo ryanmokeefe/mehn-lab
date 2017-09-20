@@ -1,4 +1,4 @@
-# MEAN Lab
+# MEHN Lab
 
 ## Prompt
 
@@ -6,10 +6,10 @@ This is an open-ended pair lab! It is up to you and your teammate to come up wit
 
 ## Technical Requirements
 
-Your application should be MEAN. This includes...
+Your application should be MEHN. This includes...
 * Using **MongoDB** as your database and **Mongoose** as your ODM.
 * Using **Express** to handle HTTP requests and serve API endpoints.
-* Adding **Angular** as your front-end. Express should only handle your root view as well as your API routes. Angular should take care of the rest via `ui.router`.
+* Adding **Handlebars** for your views.
 * Using **Node** to run your Express server
 
 Your app should have CRUD functionality for at least one model.
@@ -28,7 +28,7 @@ Allow the user to log-in using Twitter.
 
 You will be working in pairs. We will leave the group selection up to you. Feel free find a partner after the lab has been introduced.
 
-We recommend following a pair programming approach, in which one person is the "driver" and the other is the "navigator". Throughout the lab you will switch roles. More information can be found [here](https://www.versionone.com/agile-101/agile-software-programming-best-practices/pair-programming/).
+We recommend following a structured pair programming approach, in which one person is the "driver" and the other is the "navigator". Throughout the lab you must switch roles.  [Here is an explanation of a structured pair-programming approach.](https://www.versionone.com/agile-101/agile-software-programming-best-practices/pair-programming/).
 
 ### Some Ideas
 
