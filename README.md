@@ -2,9 +2,11 @@
 
 ## Prompt
 
-This is an open-ended pair lab! It is up to you and your teammate to come up with a project idea. It must, however, fulfill the following technical requirements...
+This is an open-ended pair lab! It is up to you and your teammate to come up with a project idea. It must, however, fulfill the following requirements...
 
-## Technical Requirements
+## Requirements
+
+### Technical Requirements
 
 Your application should be MEHN. This includes...
 * Using **MongoDB** as your database and **Mongoose** as your ODM.
@@ -13,6 +15,11 @@ Your application should be MEHN. This includes...
 * Using **Node** to run your Express server
 
 Your app should have CRUD functionality for at least one model.
+
+### Working Requirements
+
+* Both students ***must have commits on the repository***.
+* Tasks must be fairly divided between each student. Leave a comment in the submission indicating each student's responsibilities.
 
 ### Bonus I
 
