@@ -56,3 +56,21 @@ Please submit an issue to this repo by the time indicated on the course schedule
 * A link to your lab repo
 * A link to your deployed application (if you have one)
 * The names of your group members
+
+## Grading
+You will be graded with your partner and both receive the same score. It is really important that you have roughly the same number of commits to your project!
+
+Your project should have:
+* Semantic HTML and CSS that passes validation
+* A `package.json` file listing all the packages you used
+* An `index.js` or `server.js` file for starting up your server
+* A `views/` directory for your handlebars views and a `layout.hbs`
+* A `controllers/` directory for each controller in your application
+* A `models/` directory for your Mongoose models
+* A connection to MongoDB through Mongoose
+* The ability to create (C) a record of your model
+* The ability to read (R) a single record of your model (a show view)
+* The ability to read (R) multiple records of your model (a list view)
+* The ability to update (U) a record of your model
+* The ability to delete (D) a record of your model
+
