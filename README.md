@@ -2,13 +2,13 @@
 
 ## Prompt
 
-This is an open-ended, pair lab! You and your team mate should choose from the following domains or come up with your own.If you come up with your own, check it with an instructor! It must, however, fulfill the following requirements:
+This is an open-ended, pair lab! You and your team mate should choose from the following domains or come up with your own. If you come up with your own, run it by an instructor first! It must, however, fulfill the following requirements:
 
 ## Requirements
 
 ### Technical Requirements
 
-Your application should be MEHN. This includes:
+Your application should be use the MEHN stack. This includes:
 * Using **MongoDB** as your database and **Mongoose** as your ODM.
 * Using **Express** to handle HTTP requests and serve API endpoints.
 * Adding **Handlebars** for your views.
@@ -25,10 +25,10 @@ Your app should have CRUD functionality for at least one model.
 Add a second model to your application, which is embedded under the first model.
 
 ### Bonus II
-Deploy your app to Heroku
+Deploy your app to Heroku.
 
 ### Bonus III
-Add authentication to your app with [Passport](http://www.passportjs.org)
+Add authentication to your app with [Passport](http://www.passportjs.org).
 
 ## Pairs
 
@@ -42,7 +42,7 @@ Pair programming is a common industry practice where two developers work on the 
 Pick from one of the following project ideas. If you and your partner would like to come up with your own domain, run it by an instructor first for sign-off.
 
 ### HackerNews style link aggregation site
-Users can post news links to the site where other users can comment on them. Each link should have a url, title, brief description and the date it was posted. The homepage of the site should list all the most recently posted links and show the number of comments.
+Users can post news links to the site where they get aggregated on the home page. Each link should have a url, title, brief description and the date it was posted. The homepage of the site should list all the most recently posted links. As a bonus, add the ability to comment on links.
 
 ### StackOverflow-style Question/Answer page
 Users can post questions so other users can answer them. The most recent questions should be visible on the homepage. Each question should have a title and a description. Other users can then submit answers to these questions. 
@@ -71,6 +71,3 @@ Your project should have:
 * The ability to create (C) a record of your model
 * The ability to read (R) a single record of your model (a show view)
 * The ability to read (R) multiple records of your model (a list view)
-* The ability to update (U) a record of your model
-* The ability to delete (D) a record of your model
-
