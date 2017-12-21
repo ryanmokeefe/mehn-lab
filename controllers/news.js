@@ -47,7 +47,7 @@ router.put('/:title', (req, res) => {
   })
 // Delete:
 router.delete('/:title', (req, res) => {
-    Candidate.findOneAndRemove({ title: req.params.title })
+    News.findOneAndRemove({ title: req.params.title })
       .then(
         () => {
           res.redirect('/news')
