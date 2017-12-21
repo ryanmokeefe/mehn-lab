@@ -1,13 +1,13 @@
 const express       = require('express')
 // delete this line (replacing database with schema file): 
 // const db            = require('../db/connection')
-const Candidate     = require('../db/schema')
+const News     = require('../db/schema')
 const router        = express.Router()
 
 //
 router.get('/', (req, res) => {
     News.find({})
-      .then((candidate) => {
+      .then((news) => {
         res.render('news-index', {
           news: news
         })
