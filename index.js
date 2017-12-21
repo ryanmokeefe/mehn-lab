@@ -22,28 +22,14 @@ app.use(methodOverride('_method'))
 // configure the parser to support html forms (access to the body of the request)
 app.use(parser.urlencoded( { extended: true }))
 
-
-
-<<<<<<< HEAD
-app.listen(app.get('port'),() => {
-    console.log('ayyyyyy LMAO')
-=======
 // * Configs Above THIS
 app.get('/', (req, res) => {
-<<<<<<< HEAD
-    app.render('app-welcome')
->>>>>>> aeadf3510a0e58d47de2b9372788b321f538a8aa
-=======
-    app.render('layout-main')
->>>>>>> c0bf534b1f1b29a7b022f74309ffc999d98d6e17
+
+  app.render('layout-main')
 })
 
 app.listen(app.get('port'), () => {
-    console.log('It\'s aliiive!')
+  console.log('It\'s aliiive!')
   })
 
-<<<<<<< HEAD
-
-=======
->>>>>>> aeadf3510a0e58d47de2b9372788b321f538a8aa
 console.log('working')
