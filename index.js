@@ -15,4 +15,15 @@ app.engine('.hbs', hbs({
     layoutsDir: 'views/',
     defaultLayout: 'layout-main'
   }))
-  
+
+
+app.get('/', (req, res) => {
+    res.render('main')
+})
+
+app.listen(app.get('port'),() => {
+    console.log('ayyyyyy')
+})
+
+
+s
