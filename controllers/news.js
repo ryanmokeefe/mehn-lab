@@ -1,13 +1,13 @@
 const express       = require('express')
 // delete this line (replacing database with schema file): 
 // const db            = require('../db/connection')
-const Candidate     = require('../db/schema')
+const News          = require('../db/schema')
 const router        = express.Router()
 
 //
 router.get('/', (req, res) => {
     News.find({})
-      .then((candidate) => {
+      .then((news) => {
         res.render('news-index', {
           news: news
         })
@@ -47,7 +47,7 @@ router.put('/:title', (req, res) => {
   })
 // Delete:
 router.delete('/:title', (req, res) => {
-    Candidate.findOneAndRemove({ title: req.params.title })
+    News.findOneAndRemove({ title: req.params.title })
       .then(
         () => {
           res.redirect('/news')
