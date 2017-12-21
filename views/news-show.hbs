@@ -1,0 +1,19 @@
+{{#if news}}
+<h2>{{news.title}}</br>{{news.url}}</br>{{news.description}}</br>{{news.date}}</h2>
+{{else}}
+<h2>That article couldn't be found!</h2>
+{{/if}}
+
+<h2>Update Information</h2>
+<form action="/news/{{news.title}}?_method=put" method="post">
+  <input type="text" name="news[title]" value="{{news.title}}">
+  <input type="text" name="news[url]" value="{{news.url}}">
+  <input type="text" name="news[description]" value="{{news.description}}">
+  <input type="text" name="news[date]" value="{{news.date}}">
+  <input type="submit" value="Update">
+</form>
+
+<h2>Delete Article</h2>
+<form action="/news/{{news.title}}?_method=delete" method="post">
+    <input type="submit" value="Remove">
+</form>
