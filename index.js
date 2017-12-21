@@ -16,3 +16,19 @@ app.engine('.hbs', hbs({
     defaultLayout: 'layout-main'
   }))
   
+// * ORDER MATTERS! place configurations ABOVE rendering
+app.use('/assets', express.static('public'))
+app.use(methodOverride('_method'))
+// configure the parser to support html forms (access to the body of the request)
+app.use(parser.urlencoded( { extended: true }))
+
+
+
+// * Configs Above THIS
+app.get('/', (req, res) => {
+    app.render('app-welcome')
+})
+
+app.listen(app.get('port'), () => {
+    console.log('It\'s aliiive!')
+  })
