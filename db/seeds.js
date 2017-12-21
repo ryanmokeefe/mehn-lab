@@ -8,4 +8,4 @@ News.remove({})
     })
     .then(() =>  {
         process.exit()
-    })
+})
