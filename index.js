@@ -22,8 +22,8 @@ app.get('/', (req, res) => {
 })
 
 app.listen(app.get('port'),() => {
-    console.log('ayyyyyy')
+    console.log('ayyyyyy LMAO')
 })
 
 
-s
+
