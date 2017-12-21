@@ -4,7 +4,6 @@ const news = require("./controllers/news")
 const app = express()
 const parser = require("body-parser")
 const methodOverride = require("method-override")
-const
 
 /// Port:
 app.set('port', process.env.PORT || 4001)
