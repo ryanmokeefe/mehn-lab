@@ -33,9 +33,9 @@ News.create(req.body.news)
     .then(news => {
     res.redirect(`/news/${news.title}`)
     })
-    // .catch((err) => {
-    //   console.log(err)
-    // })
+    .catch((err) => {
+      console.log(err)
+    })
 })
 
 // Update:
