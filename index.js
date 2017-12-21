@@ -15,15 +15,30 @@ app.engine('.hbs', hbs({
     layoutsDir: 'views/',
     defaultLayout: 'layout-main'
   }))
+  
+// * ORDER MATTERS! place configurations ABOVE rendering
+app.use('/assets', express.static('public'))
+app.use(methodOverride('_method'))
+// configure the parser to support html forms (access to the body of the request)
+app.use(parser.urlencoded( { extended: true }))
 
 
-app.get('/', (req, res) => {
-    res.render('main')
-})
 
+<<<<<<< HEAD
 app.listen(app.get('port'),() => {
     console.log('ayyyyyy LMAO')
+=======
+// * Configs Above THIS
+app.get('/', (req, res) => {
+    app.render('app-welcome')
+>>>>>>> aeadf3510a0e58d47de2b9372788b321f538a8aa
 })
 
+app.listen(app.get('port'), () => {
+    console.log('It\'s aliiive!')
+  })
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aeadf3510a0e58d47de2b9372788b321f538a8aa

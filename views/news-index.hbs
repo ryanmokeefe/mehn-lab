@@ -1,0 +1,15 @@
+<h2>{{news.length}} News Articles</h2>
+{{#each news as |news index|}}
+<h3>
+  <a href="/news/{{news.url}}">{{news.title}}</a>
+  {{news.description}}{{news.date}}
+</h3>
+{{/each}}
+
+<h2>Post New Article</h2>
+<form action="/news" method="post">
+  <input type="text" name="news[url]" placeholder="Link">
+  <input type="text" name="news[title]" placeholder="title">
+  <input type="text" name="news[description]" placeholder="description">
+  <input type="submit" value="Post">
+</form>
