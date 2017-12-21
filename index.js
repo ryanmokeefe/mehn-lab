@@ -6,8 +6,8 @@ const parser = require("body-parser")
 const methodOverride = require("method-override")
 
 /// Port:
-app.set('port', process.env.PORT || 4001)
 app.set('view engine', 'hbs')
+app.set('port', process.env.PORT || 4001)
 
 app.use(methodOverride('_method'))
 
