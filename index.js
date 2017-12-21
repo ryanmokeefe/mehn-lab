@@ -26,7 +26,7 @@ app.use(parser.urlencoded( { extended: true }))
 
 // * Configs Above THIS
 app.get('/', (req, res) => {
-    app.render('app-welcome')
+    app.render('layout-main')
 })
 
 app.listen(app.get('port'), () => {
