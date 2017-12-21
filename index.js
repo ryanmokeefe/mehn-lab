@@ -27,7 +27,7 @@ app.use(parser.urlencoded( { extended: true }))
 
 // * Configs Above THIS
 app.get('/', (req, res) => {
-    res.render('layout-main')
+    res.render('app-welcome')
 })
 
 app.use('/news', news)
