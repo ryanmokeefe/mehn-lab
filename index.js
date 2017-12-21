@@ -30,8 +30,12 @@ app.listen(app.get('port'),() => {
 =======
 // * Configs Above THIS
 app.get('/', (req, res) => {
+<<<<<<< HEAD
     app.render('app-welcome')
 >>>>>>> aeadf3510a0e58d47de2b9372788b321f538a8aa
+=======
+    app.render('layout-main')
+>>>>>>> c0bf534b1f1b29a7b022f74309ffc999d98d6e17
 })
 
 app.listen(app.get('port'), () => {
