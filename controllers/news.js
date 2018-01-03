@@ -1,4 +1,5 @@
 const express       = require('express')
+const mongoose      = require('mongoose)
 // delete this line (replacing database with schema file): 
 // const db            = require('../db/connection')
 const News          = require('../db/schema')
@@ -53,6 +54,5 @@ router.delete('/:title', (req, res) => {
           res.redirect('/news')
         }
     )
-  })
-  module.exports = router
-  
+})
+module.exports = router
