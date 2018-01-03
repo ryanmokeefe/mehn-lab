@@ -1,8 +1,11 @@
 <h2>{{news.length}} News Articles</h2>
 {{#each news as |new index|}}
 <h3>
-  <a href="/news/{{news.id}}">{{new.title}}</a>
-  {{new.description}}
+  {{!-- <a href="/news/{{news.id}}">{{new.title}}</a>
+  {{new.description}} --}}
+
+  <a href="/news/{{news.url}}">{{news.title}},
+  {{news.description}}{{news.date}}</a>
 </h3>
 {{/each}}
 

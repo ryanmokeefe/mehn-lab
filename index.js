@@ -67,6 +67,9 @@ app.use(function (req, res, next) {
 //use routes for passport
 var routes = require('./config/routes');
 app.use(routes);
+app.get('/', (req, res) => {
+    res.render('news-index')
+})
 
 app.listen(3000);
 
