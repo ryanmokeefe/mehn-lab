@@ -49,7 +49,7 @@ app.engine('.hbs', hbs({
 app.use('/assets', express.static('public'))
 // configure the parser to support html forms (access to the body of the request)
 app.use(parser.urlencoded( { extended: true }))
-
+app.use(parser.json())
 
 app.use('/', news)
 
