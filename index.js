@@ -17,6 +17,11 @@ app.use(morgan('dev'));
 app.use(cookieParser());
 // app.use(parser()); 
 
+// set view engine
+app.set('view engine', 'hbs');
+app.set("views","./views");
+app.use(express.static(__dirname + '/public'));
+
 // uses session ENCRYPTION
 app.use(session({ secret: 'WDI-GENERAL-ASSEMBLY-EXPRESS' })); 
 app.use(passport.initialize());
@@ -24,12 +29,6 @@ app.use(passport.session());
 app.use(flash()); 
 
 require('./config/passport')(passport);
-
-
-// set view engine
-app.set('view engine', 'hbs');
-app.set("views","./views");
-app.use(express.static(__dirname + '/public'));
 
 
 /// Port:
@@ -66,13 +65,12 @@ app.use(function (req, res, next) {
 });
 
 //use routes for passport
-var routes = require('./config/routes');
-app.use(routes);
+// var routes = require('./config/routes');
+app.use(news);
 app.get('/', (req, res) => {
     res.render('news-index')
 })
 
-app.listen(3000);
 
 app.listen(app.get('port'), () => {
   console.log('It\'s aliiive!')
