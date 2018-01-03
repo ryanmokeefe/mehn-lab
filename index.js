@@ -15,7 +15,11 @@ var session      = require('express-session');
 
 app.use(morgan('dev')); 
 app.use(cookieParser());
+<<<<<<< HEAD
 //app.use(parser()); 
+=======
+// app.use(parser()); 
+>>>>>>> 7ae772c2414e443ed1154c42b9f7a664f482e32f
 
 // uses session ENCRYPTION
 app.use(session({ secret: 'WDI-GENERAL-ASSEMBLY-EXPRESS' })); 

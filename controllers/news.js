@@ -1,4 +1,3 @@
-const mongoose      = require('mongoose')
 const express       = require('express')
 // delete this line (replacing database with schema file): 
 // const db            = require('../db/connection')
