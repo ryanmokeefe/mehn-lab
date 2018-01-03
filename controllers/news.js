@@ -1,4 +1,3 @@
-const mongoose      = require('mongoose')
 const express       = require('express')
 const mongoose      = require('mongoose')
 // delete this line (replacing database with schema file): 
