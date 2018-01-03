@@ -15,8 +15,7 @@ var session      = require('express-session');
 
 app.use(morgan('dev')); 
 app.use(cookieParser());
-// app.use(parser()); 
-
+// app.use(parser());
 // uses session ENCRYPTION
 app.use(session({ secret: 'WDI-GENERAL-ASSEMBLY-EXPRESS' })); 
 app.use(passport.initialize());
