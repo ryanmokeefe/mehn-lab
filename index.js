@@ -38,6 +38,7 @@ app.set('port', process.env.PORT || 4001)
 
 app.use(methodOverride('_method'))
 
+app.use(methodOverride('_method'))
 app.engine('.hbs', hbs({
     extname: '.hbs',
     partialsDir: 'views/',
@@ -74,7 +75,6 @@ app.get('/', (req, res) => {
 app.listen(3000);
 
 app.listen(app.get('port'), () => {
-    console.log('It\'s aliiive!')
+  console.log('It\'s aliiive!')
   })
 
-  

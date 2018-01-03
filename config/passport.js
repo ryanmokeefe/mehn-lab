@@ -8,50 +8,47 @@ var User            = require('../models/user');
 // export all the functions
 module.exports = function(passport) {
 // serialize and deserialize session authentication (must be inside module.exports):
-    passport.serializeUser(function(user, callback) {
-        callback(null, user.id)
-      })
-    
-      passport.deserializeUser(function(id, callback) {
-        User.findById(id, function(err, user) {
-            callback(err, user)
-        })
+   passport.serializeUser(function(user, callback) {
+       callback(null, user.id)
+     })
+   
+     passport.deserializeUser(function(id, callback) {
+       User.findById(id, function(err, user) {
+           callback(err, user)
+       })
     })
-    
-
-
-    // need to use passport.use + name
+   // need to use passport.use + name
 //****** must match in users.js */
-    passport.use('local-signup', new LocalStrategy({
-      usernameField : 'email',
-      passwordField : 'password',
-      // tells it to pass request to another callback function:
-      passReqToCallback : true
-    }, function(req, email, password, callback) {
+   passport.use('local-signup', new LocalStrategy({
+     usernameField : 'email',
+     passwordField : 'password',
+     // tells it to pass request to another callback function:
+     passReqToCallback : true
+   }, function(req, email, password, callback) {
 // inserted from lesson plan:
 
-         // Find a user with this e-mail
-    User.findOne({ 'local.email' :  email }, function(err, user) {
-        if (err) return callback(err);
-  
-        // If there already is a user with this email
-        if (user) {
-      return callback(null, false, req.flash('signupMessage', 'This email is already used.'));
-        } else {
-        // There is no email registered with this emai
-      // Create a new user
-      var newUser            = new User();
-      newUser.local.email    = email;
-      // not saving password in database - ENCRYPTING first:
-      newUser.local.password = newUser.encrypt(password);
-  
-      newUser.save(function(err) {
-        if (err) throw err;
-        return callback(null, newUser);
-      });
-        }
-      });
-    }));
+        // Find a user with this e-mail
+   User.findOne({ 'local.email' :  email }, function(err, user) {
+       if (err) return callback(err);
+ 
+       // If there already is a user with this email
+       if (user) {
+     return callback(null, false, req.flash('signupMessage', 'This email is already used.'));
+       } else {
+       // There is no email registered with this emai
+     // Create a new user
+     var newUser            = new User();
+     newUser.local.email    = email;
+     // not saving password in database - ENCRYPTING first:
+     newUser.local.password = newUser.encrypt(password);
+ 
+     newUser.save(function(err) {
+       if (err) throw err;
+       return callback(null, newUser);
+     });
+       }
+     });
+   }));
 
 /////
 
