@@ -1,3 +1,4 @@
+const mongoose      = require('mongoose')
 const express       = require('express')
 // delete this line (replacing database with schema file): 
 // const db            = require('../db/connection')
@@ -14,24 +15,27 @@ router.get('/', (req, res) => {
       })
   })
 
+
+
 // get:
-router.get('/:title', (req, res) => {
-let news = req.params.title
-News.findOne({ title: req.params.title })
-.then((news) => {
-res.render('news-show', {
-    news: news
-})
-})
-.catch((err) => {
-    console.log(err)
-})
+router.get('/:id', (req, res) => {
+    // let news = req.params.title
+    News.findOne({ id: req.params.id
+    })
+        .then((news) => {
+            res.render('news-show', {
+                news: news
+        })
+    })
+    .catch((err) => {
+        console.log(err)
+    })
 })
 // Create new:
 router.post('/', (req, res) => {
 News.create(req.body.news)
     .then(news => {
-    res.redirect(`/news/${news.title}`)
+    res.redirect(`/news/${news.id}`)
     })
     .catch((err) => {
       console.log(err)
