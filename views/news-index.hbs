@@ -4,15 +4,15 @@
   {{!-- <a href="/news/{{news.id}}">{{new.title}}</a>
   {{new.description}} --}}
 
-  <a href="/news/{{news.url}}">{{news.title}},
-  {{news.description}}{{news.date}}</a>
+  <a href="/news/{{new.url}}">{{new.title}},
+  {{new.description}}{{new.date}}</a>
 </h3>
 {{/each}}
 
 <h2>Post New Article</h2>
 <form action="/news" method="post">
-  <input type="text" name="news[url]" placeholder="Link">
-  <input type="text" name="news[title]" placeholder="title">
-  <input type="text" name="news[description]" placeholder="description">
+  <input type="text" name="new[url]" placeholder="Link">
+  <input type="text" name="new[title]" placeholder="title">
+  <input type="text" name="new[description]" placeholder="description">
   <input type="submit" value="Post">
 </form>
